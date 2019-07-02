@@ -11,7 +11,7 @@
 
 > Get some insight into your recurring monthly expenses
 
-### 🏠 [Homepage](recur.jsdr.dev)
+### 🏠 [Homepage](https://recur.jsdr.dev)
 
 ## Install
 
