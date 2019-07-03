@@ -5,7 +5,7 @@ import PaymentChart from './Payments/PaymentChart';
 import Title from './Title';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="flex flex-col w-screen p-8 lg:p-16 App">
       <header>
