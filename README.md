@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Recur 👋</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-0.1.1-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-0.1.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/Jensderond/recur/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>

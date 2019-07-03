@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import PaymentContext from './Payments/PaymentContext';
+import PaymentContext from './PaymentContext';
 import { Doughnut } from 'react-chartjs-2';
 
-function ChartView() {
+function PaymentChart() {
   // Import context with the Hooks API
   const context = useContext(PaymentContext);
   const payments = context.payments;
@@ -56,4 +56,4 @@ function ChartView() {
   );
 }
 
-export default ChartView;
+export default PaymentChart;
