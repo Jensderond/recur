@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@tippy.js/react": "2.2.2",
+    "@tippy.js/react": "2.2.3",
     "@types/jest": "24.0.16",
     "@types/node": "12.6.8",
     "@types/react": "16.8.24",
