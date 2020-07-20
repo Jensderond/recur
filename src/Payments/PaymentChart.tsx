@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import PaymentContext from './PaymentContext';
-import { Doughnut } from 'react-chartjs-2';
+import React, { useContext } from "react";
+import PaymentContext from "./PaymentContext";
+import { Doughnut } from "react-chartjs-2";
 
 export default function App() {
   // Import context with the Hooks API
@@ -27,31 +27,38 @@ export default function App() {
     .map((x) => x.amount)
     .reduce((a, b) => a + b, 0);
 
-  const data = {
-    datasets: [{
-      data: [EntertainmentTotal, EnsuranceTotal, TelecomTotal, OtherTotal],
-      backgroundColor: [
-        '#68b230',
-        '#ee3243',
-        '#f7bc1a',
-        '#179cd4',
-        '#e21b1b'
-      ],
+  const chartData = [
+    new Intl.NumberFormat("en-US").format(EntertainmentTotal),
+    new Intl.NumberFormat("en-US").format(EnsuranceTotal),
+    new Intl.NumberFormat("en-US").format(TelecomTotal),
+    new Intl.NumberFormat("en-US").format(OtherTotal),
+  ];
 
-      hoverBackgroundColor: [
-        '#68b230',
-        '#ee3243',
-        '#f7bc1a',
-        '#179cd4',
-        '#e21b1b'
-      ]
-    }],
+  const data = {
+    datasets: [
+      {
+        data: chartData.filter((e) => parseInt(e) !== 0),
+        backgroundColor: [
+          "#68b230",
+          "#ee3243",
+          "#f7bc1a",
+          "#179cd4",
+          "#e21b1b",
+        ],
+
+        hoverBackgroundColor: [
+          "#68b230",
+          "#ee3243",
+          "#f7bc1a",
+          "#179cd4",
+          "#e21b1b",
+        ],
+      },
+    ],
 
     // With [...new Set] it removes the duplicate categories
-    labels: [...new Set(payments.map((x) => x.category))]
-  }
+    labels: [...new Set(payments.map((x) => x.category))],
+  };
 
-  return (
-    <Doughnut data={data} />
-  );
+  return <Doughnut data={data} />;
 }

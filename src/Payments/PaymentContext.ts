@@ -1,12 +1,23 @@
 import * as React from 'react';
 
-const PaymentContext = React.createContext({
+type PaymentContextProps = {
+  currency: 'EUR' | 'USD',
+  payments: Payment[]
+}
+
+type Payment = {
+  id: number;
+  name: string;
+  amount: number;
+  category: 'Entertainment' | 'Abbonnement' | 'Overig' | 'Verzekeringen';
+}
+
+const PaymentContext = React.createContext<PaymentContextProps>({
+  currency: "EUR",
   payments: [
-    { id: 1, name: 'PlayStation Network', amount: 5, category: 'Entertainment' },
-    { id: 2, name: 'Tele2', amount: 27, category: 'Abbonnement' },
-    { id: 3, name: 'ZLM', amount: 15, category: 'Verzekeringen' },
-    { id: 4, name: 'Spotify', amount: 10, category: 'Entertainment' },
-    { id: 5, name: 'iCloud drive', amount: 0.99, category: 'Overig' },
+    { id: 6, name: 'Spotify', amount: 15, category: 'Entertainment' },
+    { id: 7, name: 'Tele2', amount: 34.50, category: 'Abbonnement' },
+    { id: 8, name: 'BasicFit', amount: 33.99, category: 'Abbonnement' }
   ]
 });
 
